@@ -139,6 +139,25 @@ const Home = () => {
     }
   };
 
+  // return (
+  //   <div className="home-container">
+  //     <div className="background-animation">
+  //       <div className="bubble bubble-1"></div>
+  //       <div className="bubble bubble-2"></div>
+  //       <div className="bubble bubble-3"></div>
+  //       <div className="bubble bubble-4"></div>
+  //     </div>
+      
+  //     <motion.div 
+  //       className="home-content"
+  //       initial={{ opacity: 0 }}
+  //       animate={{ opacity: 1 }}
+  //       transition={{ duration: 0.5 }}
+  //     >
+  //       {renderForm()}
+  //     </motion.div>
+  //   </div>
+  // );
   return (
     <div className="home-container">
       <div className="background-animation">
@@ -147,9 +166,13 @@ const Home = () => {
         <div className="bubble bubble-3"></div>
         <div className="bubble bubble-4"></div>
       </div>
-      
+  
       <motion.div 
-        className="home-content"
+        className={`home-content ${
+          location.pathname === '/register' && registrationType === 'applicant' ? 'applicant-mode' :
+          location.pathname === '/register' && registrationType === 'company' ? 'company-mode' :
+          ''
+        }`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -158,6 +181,8 @@ const Home = () => {
       </motion.div>
     </div>
   );
+  
 };
+
 
 export default Home;
