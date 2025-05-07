@@ -1,5 +1,6 @@
 // CompanyDashboard.jsx
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { useJobs } from '../../context/JobContext';
@@ -141,10 +142,10 @@ const CompanyDashboard = () => {
                       Posted on: <span>{job.postedDate}</span>
                     </div>
                   </div>
-                  {/* <div className="card-footer">
-                    <button className="action-btn">View Applicants</button>
-                    <button className="action-btn outline">Edit Posting</button>
-                  </div> */}
+                  <div className="card-footer">
+                    <Link to={`/jobs/${job.id}`} className="job-link">View</Link>
+                    <Link to={`/jobs/${job.id}/edit`} className="job-link">Edit Posting</Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
