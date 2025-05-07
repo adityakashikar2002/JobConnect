@@ -1,0 +1,105 @@
+.register-company-container {
+    background-color: #e0f7fa; /* Light teal background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  .register-company-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #00897b; /* Teal */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .register-company-error-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffebee;
+    color: #d32f2f;
+    border-radius: 6px;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .register-company-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Slightly smaller gap for more fields */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #00acc1; /* Cyan */
+    box-shadow: 0 0 6px rgba(0, 188, 212, 0.2);
+  }
+  
+  .form-textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 80px;
+  }
+  
+  .register-company-button {
+    padding: 14px 32px;
+    background-color: #00acc1; /* Cyan */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+  }
+  
+  .register-company-button:hover {
+    background-color: #00838f; /* Darker cyan */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 188, 212, 0.4);
+  }
+  
+  .register-company-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+  }
+  
+  .register-company-login-link {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .login-link {
+    color: #00acc1; /* Cyan */
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,8 @@
+.profile-page {
+    padding: 2rem;
+    background-color: #f0f2f5; /* Light gray background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

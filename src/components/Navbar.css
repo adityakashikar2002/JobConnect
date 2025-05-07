@@ -1,0 +1,358 @@
+/* .navbar {
+    background: linear-gradient(to right, #4a148c, #880e4f); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .navbar-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #fdd835;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-link:hover {
+    color: #fdd835;
+  }
+  
+  .link-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .dashboard-icon {
+    background-image: url('https://fakeimg.pl/600x400'); 
+  }
+  
+  .jobs-icon {
+    background-image: url('https://fakeimg.pl/600x400'); 
+  }
+  
+  .profile-icon {
+    background-image: url('https://fakeimg.pl/600x400'); 
+  }
+  
+  .navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-greeting {
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .navbar-logout-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .logout-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    background-image: url('https://fakeimg.pl/600x400');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .navbar-auth {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-login-button,
+  .navbar-register-button {
+    background-color: #ffe24f; 
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-login-button:hover,
+  .navbar-register-button:hover {
+    background-color: #e9ef26; 
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-icon,
+  .register-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .login-icon {
+    background-image: url('https://fakeimg.pl/600x400'); 
+  }
+  
+  .register-icon {
+    background-image: url('https://fakeimg.pl/600x400'); 
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 0 1rem;
+    }
+  
+    .navbar-menu {
+      gap: 1rem;
+    }
+  
+    .navbar-links {
+      gap: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .navbar-auth {
+      gap: 0.5rem;
+    }
+  
+    .navbar-login-button,
+    .navbar-register-button,
+    .navbar-logout-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .user-greeting {
+      font-size: 0.9rem;
+    }
+  } */
+
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2d3436;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-gradient {
+    background: linear-gradient(45deg, #6c5ce7, #fd79a8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+  }
+  
+  .nav-link:hover {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+  
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .logout-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(45deg, #fd79a8, #ff8fab);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    box-shadow: 0 5px 15px rgba(253, 121, 168, 0.4);
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .login-btn, .register-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn {
+    background: transparent;
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+  }
+  
+  .login-btn:hover {
+    background: rgba(108, 92, 231, 0.1);
+  }
+  
+  .register-btn {
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+  }
+  
+  .register-btn:hover {
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      gap: 0.5rem;
+    }
+    
+    .nav-link {
+      padding: 0.5rem;
+    }
+    
+    .nav-link span:not(.nav-icon) {
+      display: none;
+    }
+    
+    .auth-buttons {
+      gap: 0.5rem;
+    }
+    
+    .login-btn, .register-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
