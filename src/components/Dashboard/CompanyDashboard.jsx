@@ -163,39 +163,6 @@ const CompanyDashboard = () => {
             </motion.div>
           )}
         </motion.div>
-
-        {/* <motion.div 
-          className="dashboard-section quick-actions"
-          variants={itemVariants}
-        >
-          <h2 className="section-heading">Quick Actions</h2>
-          <div className="actions-grid">
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">🆕</span>
-              <span className="action-text">New Job Post</span>
-            </motion.button>
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">🏢</span>
-              <span className="action-text">Company Profile</span>
-            </motion.button>
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">📊</span>
-              <span className="action-text">Analytics</span>
-            </motion.button>
-          </div>
-        </motion.div> */}
       </motion.div>
     </div>
   );

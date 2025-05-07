@@ -165,7 +165,7 @@ const RegisterCompanyForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Acme Corporation"
+                  placeholder="Ace Corporation"
                 />
               </motion.div>
 
@@ -314,7 +314,7 @@ const RegisterCompanyForm = () => {
                   className="form-input"
                   value={formData.address}
                   onChange={handleChange}
-                  placeholder="123 Business Ave, City"
+                  placeholder="Street 46, Shivaji Nagar, Pune"
                 />
               </motion.div>
             </div>

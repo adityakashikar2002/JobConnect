@@ -10,6 +10,7 @@ const ApplicantProfile = () => {
   const { applicants, updateApplicant } = useJobs();
 
   const [formData, setFormData] = useState({
+    id: user?.id || '', // Add this
     name: '',
     email: '',
     phone: '',
@@ -26,6 +27,7 @@ const ApplicantProfile = () => {
     const currentApplicant = applicants.find(a => a.id === user?.id);
     if (currentApplicant) {
       setFormData({
+        id: currentApplicant.id, // Ensure ID is set
         name: currentApplicant.name,
         email: currentApplicant.email,
         phone: currentApplicant.phone || '',
@@ -43,14 +45,16 @@ const ApplicantProfile = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     const updatedApplicantData = {
+      id: user.id, // Add this line to include the user ID
       ...formData,
       skills: formData.skills.split(',').map(skill => skill.trim())
     };
-
+  
     updateApplicant(updatedApplicantData);
     updateUser({ profilePicture: formData.profilePicture });
     setIsEditing(false);
@@ -185,6 +189,17 @@ const ApplicantProfile = () => {
           </form>
         ) : (
           <div className="profile-details">
+            {formData.profilePicture && (
+              <div className="detail-row">
+                <span className="detail-label">Profile Picture:</span>
+                <img
+                  src={formData.profilePicture}
+                  alt="Profile"
+                  className="profile-preview-image"
+                  style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover', marginLeft: '10px' }}
+                />
+              </div>
+            )}
             <div className="detail-row">
               <span className="detail-label">Full Name:</span>
               <span className="detail-value">{formData.name}</span>
@@ -230,17 +245,6 @@ const ApplicantProfile = () => {
                 >
                   View Resume
                 </a>
-              </div>
-            )}
-            {formData.profilePicture && (
-              <div className="detail-row">
-                <span className="detail-label">Profile Picture:</span>
-                <img
-                  src={formData.profilePicture}
-                  alt="Profile"
-                  className="profile-preview-image"
-                  style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover', marginLeft: '10px' }}
-                />
               </div>
             )}
           </div>

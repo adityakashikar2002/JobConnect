@@ -166,7 +166,7 @@ const RegisterApplicantForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="John Doe"
+                  placeholder="Rohit Mishra"
                 />
               </motion.div>
 
@@ -183,7 +183,7 @@ const RegisterApplicantForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="john@example.com"
+                  placeholder="rohitmishra@example.com"
                 />
               </motion.div>
 
@@ -235,7 +235,7 @@ const RegisterApplicantForm = () => {
                   className="form-input"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="(123) 456-7890"
+                  placeholder="1234567890"
                 />
               </motion.div>
 
