@@ -5,12 +5,13 @@ import { useAuth } from '../../context/AuthContext';
 import { useJobs } from '../../context/JobContext';
 import StatsCard from '../StatsCard';
 import './Dashboard.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const ApplicantDashboard = () => {
   const { user } = useAuth();
   const { jobs, applications } = useJobs();
+  const navigate = useNavigate();
 
   // Calculate stats
   const appliedJobs = applications.filter(app => app.applicantId === user.id).length;
@@ -154,43 +155,11 @@ const ApplicantDashboard = () => {
               <div className="empty-icon">🔍</div>
               <h3>No Applications Yet</h3>
               <p>Start applying to jobs to see them appear here</p>
-              <button className="primary-btn">Browse Jobs</button>
+              <button className="primary-btn" onClick={() => navigate('/jobs')}>Browse Jobs</button>
             </motion.div>
           )}
         </motion.div>
 
-        {/* <motion.div 
-          className="dashboard-section quick-actions"
-          variants={itemVariants}
-        >
-          <h2 className="section-heading">Quick Actions</h2>
-          <div className="actions-grid">
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">✏️</span>
-              <span className="action-text">Update Profile</span>
-            </motion.button>
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">📝</span>
-              <span className="action-text">Edit Resume</span>
-            </motion.button>
-            <motion.button 
-              className="action-card"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="action-icon">🔔</span>
-              <span className="action-text">Notifications</span>
-            </motion.button>
-          </div>
-        </motion.div> */}
       </motion.div>
     </div>
   );

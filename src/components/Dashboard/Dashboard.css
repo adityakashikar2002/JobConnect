@@ -21,6 +21,7 @@
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .dashboard-container.applicant {
@@ -28,7 +29,8 @@
 }
 
 .dashboard-container.company {
-  background: linear-gradient(135deg, #f0f4f8 0%, #dfe7f0 100%);
+  /* background: linear-gradient(135deg, #f0f4f8 0%, #dfe7f0 100%); */
+  background: linear-gradient(135deg, #c8d8e8 0%, #dfe7f0 100%);
 }
 
 .dashboard-decoration {
