@@ -192,7 +192,7 @@ const JobCard = ({ job }) => {
           <img
             src={company?.logo || 'https://via.placeholder.com/50'}
             alt={company?.name}
-            className="company-logo"
+            className="company-logo-job-card"
           />
           <div>
             <Link 

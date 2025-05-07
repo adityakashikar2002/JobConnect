@@ -1,4 +1,4 @@
-.stats-card {
+/* .stats-card {
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
@@ -65,7 +65,7 @@
     opacity: 0.8;
   }
   
-  /* Animations (re-declared here for StatsCard specifically if needed differently) */
+
   @keyframes scaleUp {
     0% { transform: scale(0.95); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
@@ -100,4 +100,52 @@
   
   .fade-in {
     animation: fadeIn 0.3s ease-in-out forwards;
+  } */
+
+
+  .stats-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--card-color);
+  }
+  
+  .stats-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-color);
+  }
+  
+  .card-content {
+    flex: 1;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0;
   }
