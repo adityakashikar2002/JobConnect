@@ -131,7 +131,7 @@ const JobsList = () => {
         </div>
 
         {/* Company Name Filter */}
-        <div className="filter-group">
+        {/* <div className="filter-group">
           <label htmlFor="company" className="filter-label">Company</label>
           <select
             id="company"
@@ -144,7 +144,25 @@ const JobsList = () => {
               <option key={name} value={name}>{name}</option>
             ))}
           </select>
-        </div>
+        </div> */}
+        {/* Company Name Filter - Only for non-company users */}
+        {user?.type !== 'company' && (
+          <div className="filter-group">
+            <label htmlFor="company" className="filter-label">Company</label>
+            <select
+              id="company"
+              className="filter-select"
+              value={companyNameFilter}
+              onChange={(e) => setCompanyNameFilter(e.target.value)}
+            >
+              <option value="">All Companies</option>
+              {companyNames.map(name => (
+                <option key={name} value={name}>{name}</option>
+              ))}
+            </select>
+          </div>
+        )}
+
 
         {/* Location Filter */}
         <div className="filter-group">
@@ -188,7 +206,9 @@ const JobsList = () => {
             onChange={(e) => setSalaryRangeFilter(e.target.value)}
           >
             <option value="">All Ranges</option>
-            <option value="0-50000">Up to ₹50,000</option>
+            <option value="0-5000">Up to ₹5,000</option>
+            <option value="5000-25000">₹5,000 - ₹25,000</option>
+            <option value="25000-50000">₹25,000 - ₹50,000</option>
             <option value="50000-100000">₹50,000 - ₹100,000</option>
             <option value="100000+">₹100,000+</option>
           </select>
