@@ -1,3 +1,4 @@
+// ProfilePage.jsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import ApplicantProfile from '../components/Profile/ApplicantProfile';

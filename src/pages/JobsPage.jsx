@@ -1,3 +1,4 @@
+// JobsPage.jsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import JobsList from '../components/Jobs/JobsList';
