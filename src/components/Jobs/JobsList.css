@@ -208,7 +208,7 @@
 
 
 /* JobsList.css */
-.jobs-list-container {
+/* .jobs-list-container {
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -251,7 +251,7 @@
   background-color: #0056b3;
 }
 
-/* Filters Section */
+
 .filters-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -291,14 +291,14 @@
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* Results Count */
+
 .results-count {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
   color: #6c757d;
 }
 
-/* Job Grid */
+
 .job-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -358,7 +358,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments for filters */
 @media (max-width: 768px) {
   .filters-section {
     grid-template-columns: 1fr 1fr;
@@ -376,5 +375,173 @@
   
   .clear-filters-button {
     grid-column: span 1;
+  }
+} */
+
+
+.jobs-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.list-title {
+  font-size: 2.2rem;
+  color: #2d3436;
+  background: linear-gradient(45deg, #6c5ce7, #fd79a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.post-job-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.post-job-button:hover {
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
+}
+
+.post-job-button.primary {
+  background: linear-gradient(45deg, #00b894, #55efc4);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+.post-job-button.primary:hover {
+  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.4);
+}
+
+.filters-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.9rem;
+}
+
+.filter-input,
+.filter-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.clear-filters-button {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #ff7675, #fd79a8);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  box-shadow: 0 5px 15px rgba(253, 121, 168, 0.3);
+}
+
+.clear-filters-button:hover {
+  box-shadow: 0 8px 20px rgba(253, 121, 168, 0.4);
+}
+
+.results-count {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #636e72;
+  font-weight: 500;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-list-message {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.message-text {
+  color: #636e72;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs-list-container {
+    padding: 1rem;
+  }
+  
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .filters-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-section {
+    grid-template-columns: 1fr;
   }
 }
